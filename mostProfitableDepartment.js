@@ -38,26 +38,4 @@ function mostProfitableDepartment(salesData){
       {department : 'outdoor', sales : 12006, day : 'Friday'},
       {department : 'carpentry', sales : 16109, day : 'Friday'},
   ];
-  function mostProfitableDay(salesData){
-    var highDay = 0;
-    var Salesday = {};
-    var day;
-    for (i in salesData){
-      if(Salesday[salesData[i].day] == undefined){
-        Salesday[salesData[i].day] = salesData[i].sales;
-      }
-      else {
-        Salesday[salesData[i].day] = Salesday[salesData[i].day] + salesData[i].sales;
-      }
-    }
-    for(i in Salesday){
-      if(i == undefined)
-        break;
-      if(Salesday[i] > highDay){
-        highDay = Salesday[i];
-        day = i;
-      }
-    }
-    return (day);
-    console.log("Most profitable day is "+ day +" for dataset 1:")
-  }
+  
